@@ -1,0 +1,30 @@
+Ep 01 and Ep 02: 
+* Package .json is a configuration for npm. It keeps a track of what version of that package is installed in to the system. It maintains the version of our dependencies.
+* Packagelock.json keeps track of exact version, locks the version and keeps track of it.
+* There are 2 types of depedencies we can install:
+    1. Dev dependencies (Mostly used in development phase)
+    2. Nomal dependencies (Used in production)
+* Transitive dependencies : Our Project --> Parcel --> dependencies --> dependencies
+* Parcel : Powerful is a bundler it also helps in Dev build, Local Server, HMR (Hot Module Replacement) using File Watching Algorithm written in C++, Caching- Faster builds, Image Optimisation, Minification, Bundling, Compressing, Tree Shaking, Diagonostics, Code splitting, Differential bundling
+* With the help of package.json and packagelock.json-we can regenerate node modules, so we need not to push node_modules in to our Github
+* npm - calling command of npm where as npx means executing a npm package parcel with a source file as index.html 
+* Till this point we were using React from CDN links but from now on we will be using react from node modules.
+
+Ep 03: 
+* npm - It means-calling a command of npm where as npx means executing an npm command.
+* npm parcel index.html : It means executing an npm package parcel with a source file as index.html 
+* Industry standards : We need to use scripts to start or build our projects. For that we need to write scripts in scripts json of package.json file.
+Syntax:
+"script name" : the command that needs to be run in npm 
+"start" : parcel index.html - dev build
+"build" : parcel build index.html - production build
+* Executing our scripts : npm run "script name" ie; npm run start or npm run build. For just dev build we can use shorthand as npm start
+* JSX(Javascript XML) : It is a javascript syntax which is eaier to create react elements.
+* JSX is not html in javascript but JSX is html like syntax
+* JS Engine / Browsers doesn't understand JSX but Parcel is transpiling JSX code (in to React.CreateElement - JS Object) with the help of babel to make it understandable for JS Engine.
+* To use attributes in JSX, we have to use camelcase. If we are writing JSX in multiple lines we need to wrap it in "()" round brackets.
+* Components in React : 
+    1. Class based Component : Older way of creating components
+    2. Functional Components : Newer way, It is a JS function that returns a JSX element/code. These functions should always start with Capital letters.
+* To insert a React element (using JSX) inside an other React element we need to wrap it in curly braces "{}".
+* To insert a Functional component inside an other we need to wrap it in "<> </>"

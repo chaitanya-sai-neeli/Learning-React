@@ -1,3 +1,6 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+
 /*const heading = React.createElement("h1", {id : "heading"}, "Namaste React from React");
 //React.createElement() creates a js object which is a React element, it doesn't create an html element directly
 
@@ -19,18 +22,21 @@ root.render(heading);
     </div>
 </div>
 */
-// Creating the above basic html structure using React
-const parent = React.createElement("div", 
-    {id : "parent"},
-    [React.createElement("div", 
-        {id : "child1"}, 
-        [React.createElement("h1", {}, "I am an h1 tag in child1"), React.createElement("h2", {}, "I am an h2 tag in child1")]
-    ), 
-    React.createElement("div", 
-        {id : "child2"}, 
-        [React.createElement("h1", {}, "I am an h1 tag in child2"), React.createElement("h2", {}, "I am an h2 tag in child2")]
-    )]
-);
+// Creating the above basic html structure using core React
+const parent = React.createElement("div", { id: "parent" }, [
+  React.createElement("div", { id: "child1" }, [
+    React.createElement("h1", {}, "I am an h1 tag in child1"),
+    React.createElement("h2", {}, "I am an h2 tag in child1"),  
+  ]),
+  React.createElement("div", { id: "child2" }, [
+    React.createElement("h1", {}, "I am an h1 tag in child2"),
+    React.createElement("h2", {}, "I am an h2 tag in child2"),
+  ]),
+]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(parent);
-console.log(parent);
+console.log(parent); 
+
+//Writing the above core React code in JSX 
+const myheading  = <h1 className="headingtags">This is h1 tag using JSX</h1>;
+root.render(myheading); 

@@ -1,0 +1,32 @@
+{
+  "name": "reactjspractice",
+  "version": "1.0.0",
+  "description": "This is Namaste React course learning by Chaitanya Sai Neeli",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaitanya-sai-neeli/Learning-React.git"
+  },
+  "keywords": [],
+  "author": "Neeli Chaitanya Sai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chaitanya-sai-neeli/Learning-React/issues"
+  },
+  "homepage": "https://github.com/chaitanya-sai-neeli/Learning-React#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "browsersList": [
+    "last 2 versions"
+  ]
+}
