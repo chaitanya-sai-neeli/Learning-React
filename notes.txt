@@ -19,12 +19,17 @@ Syntax:
 "start" : parcel index.html - dev build
 "build" : parcel build index.html - production build
 * Executing our scripts : npm run "script name" ie; npm run start or npm run build. For just dev build we can use shorthand as npm start
-* JSX(Javascript XML) : It is a javascript syntax which is eaier to create react elements.
-* JSX is not html in javascript but JSX is html like syntax
+* JSX(Javascript XML) : It is a javascript syntax which is easier to create react elements.
+* JSX is not html in javascript but JSX is html like syntax.
 * JS Engine / Browsers doesn't understand JSX but Parcel is transpiling JSX code (in to React.CreateElement - JS Object) with the help of babel to make it understandable for JS Engine.
-* To use attributes in JSX, we have to use camelcase. If we are writing JSX in multiple lines we need to wrap it in "()" round brackets.
+* To use attributes in JSX, we have to use camelcase. If we are writing JSX in multiple lines we need to wrap it in "()" round braces.
 * Components in React : 
-    1. Class based Component : Older way of creating components
+    1. Class based Component : Older way of creating components.
     2. Functional Components : Newer way, It is a JS function that returns a JSX element/code. These functions should always start with Capital letters.
 * To insert a React element (using JSX) inside an other React element we need to wrap it in curly braces "{}".
 * To insert a Functional component inside an other we need to wrap it in "<> </>"
+* Props in JS: Arguments to a function. Passign a prop to a component is same like passing an argument to a function
+* When we have to dynamically pass data to a component we do it using props
+* Config Driven UI: UI is driven by the data/Config.
+* Whenever we are using a map we need to assign a key for each element of an array.
+* We shouldn't use the index of array elements as keys which is a bad practice.
