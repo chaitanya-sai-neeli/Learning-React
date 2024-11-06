@@ -57,3 +57,20 @@
     cursor: pointer;
     background-color: #f0f0f0;
 }
+.filterBtn{
+    margin: 10px;
+}
+.loadingContainer{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 10px;
+}
+.loadingCards{
+    height: 220px;
+    width: 250px;
+    margin: 10 0 0 30;
+    padding: 5 5 0 5;
+    border-radius: 15px;
+    background-color: #ebebeb;
+}

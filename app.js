@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 /*const heading = React.createElement("h1", {id : "heading"}, "Namaste React from React");
-//React.createElement() creates a js object which is a React element, it doesn't create an html element directly
+//React.createElement() creates a js object which is a React element, it doesn't create an html element directly.
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 //ReactDOM.createRoot is used to create a root to display react components inside a browser

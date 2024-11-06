@@ -31,5 +31,30 @@ Syntax:
 * Props in JS: Arguments to a function. Passign a prop to a component is same like passing an argument to a function
 * When we have to dynamically pass data to a component we do it using props
 * Config Driven UI: UI is driven by the data/Config.
+Ep.04 :
 * Whenever we are using a map we need to assign a key for each element of an array.
 * We shouldn't use the index of array elements as keys which is a bad practice.
+* There are 2 types of Imports and Exports
+    1. Default export/import  Ex: export Header from ./src/components/Header;
+    2. Named export/import      Ex: export const Header;
+Ep.05:
+* React hooks : These are normal JS utility functions. use State and use Effect. 
+* Super Powerful state variable: 
+  React will be constantly monitoring the state variable and Whenever it changes/updates react re-renders the component. 
+* Virtual DOM is the object representation
+* Virtual DOM is a representation of actual DOM
+* React / React Algo working nature behind the scenes:
+* Uses Reconciliation Algorithm / React Fibre: It uses diff algorithm to find the diff b/w prev & present JS objects (React keeps track of DOM in the form of objects) and then updates the UI. It doesn't compare the html elements. Hence React is faster.
+* Whenever there is a change in state variable, React will find out the diff b/w virtual DOM and re-renders the component
+* Why React is fast ? 
+* Because it does efffective DOM manipulation and 
+* React will be constantly monitoring the state variable and whenever it changes/updates react re-renders the component.
+* React Fibre: New way of finding the diff and updating the DOM.
+Ep.06:
+* useEffect: It takes 2 arguments - Callback function and a dependant array
+* Syntax : useEffect(()=>{}, []);
+* The Callback function will be called after the component renders
+* As soon as the component's render cycle is completed, the callback function of useEffect will be invoked
+* Watch Akshay Saini's CORS video
+  
+
