@@ -27,6 +27,15 @@ const restList = [
       "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/swqonxjf0mv406jhzt9t",
   },
   {
+    restName: "Cake Zone Patisserie",
+    id: 1239,
+    restCuisine: "Bakery, Desserts, Sweets",
+    restRating: "4.7 *",
+    delvTime: "26-32 mins",
+    restImageUrl:
+      "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/10/25/e34f65ba-aa4b-46be-90cd-a096f2f75b53_511927www.jpg",
+  },
+  {
     restName: "La Pino'z",
     id: 1237,
     restCuisine: "Pizza, Momos, Burgers",
@@ -44,6 +53,15 @@ const restList = [
     restImageUrl:
       "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/4/17/5d0c595a-dfb2-472b-8ca0-f4701adaa38d_774103.JPG",
   },
+  {
+    restName: "Pista House cakes",
+    id: 1240,
+    restCuisine: "Bakery, Sweets, Desserts",
+    restRating: "3.9 *",
+    delvTime: "15-20 mins",
+    restImageUrl:
+      "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/31ea22eda5c6e935f04f45e97e54b5d6"
+  }
 ];
 
 export default restList;

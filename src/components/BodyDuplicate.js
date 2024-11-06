@@ -17,19 +17,19 @@ const Body = () => {
         fetchData();
     }, []);    
 
-    const fetchData = async ()=> {
+    const fetchData = ()=> {
       // const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.4473863&lng=78.3713412&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
       // const json = await data.json();
       // console.log(json);
-      setTimeout(async () => {
+      setTimeout( () => {
         setlistOfRestaurants(restList);
         setLoading(false); // Set loading to false after data is fetched
-      }, 500); // 2 seconds loading time
+      }, 500); // 500 milli seconds loading time
     }
     
-    if (loading) return <Skeleton/>
-
-    return (
+    // if (loading) return <Skeleton/>     //this is conditional rendering: Rendering according to a condition
+    
+    return loading ? <Skeleton/> : (
         <div className="bodyMain">
         <div className="search">
             <input type="text" placeholder="search here"></input>

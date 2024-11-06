@@ -1,4 +1,4 @@
-Ep 01 and Ep 02: 
+Episode 01 and Episode 02: 
 * Package .json is a configuration for npm. It keeps a track of what version of that package is installed in to the system. It maintains the version of our dependencies.
 * Packagelock.json keeps track of exact version, locks the version and keeps track of it.
 * There are 2 types of depedencies we can install:
@@ -10,7 +10,7 @@ Ep 01 and Ep 02:
 * npm - calling command of npm where as npx means executing a npm package parcel with a source file as index.html 
 * Till this point we were using React from CDN links but from now on we will be using react from node modules.
 
-Ep 03: 
+Episode 03: 
 * npm - It means-calling a command of npm where as npx means executing an npm command.
 * npm parcel index.html : It means executing an npm package parcel with a source file as index.html 
 * Industry standards : We need to use scripts to start or build our projects. For that we need to write scripts in scripts json of package.json file.
@@ -31,30 +31,41 @@ Syntax:
 * Props in JS: Arguments to a function. Passign a prop to a component is same like passing an argument to a function
 * When we have to dynamically pass data to a component we do it using props
 * Config Driven UI: UI is driven by the data/Config.
-Ep.04 :
+
+Episode 04 :
 * Whenever we are using a map we need to assign a key for each element of an array.
 * We shouldn't use the index of array elements as keys which is a bad practice.
 * There are 2 types of Imports and Exports
     1. Default export/import  Ex: export Header from ./src/components/Header;
     2. Named export/import      Ex: export const Header;
-Ep.05:
+
+Episode 05:
 * React hooks : These are normal JS utility functions. use State and use Effect. 
 * Super Powerful state variable: 
   React will be constantly monitoring the state variable and Whenever it changes/updates react re-renders the component. 
-* Virtual DOM is the object representation
-* Virtual DOM is a representation of actual DOM
+* Virtual DOM is the object representation of actual DOM.
 * React / React Algo working nature behind the scenes:
 * Uses Reconciliation Algorithm / React Fibre: It uses diff algorithm to find the diff b/w prev & present JS objects (React keeps track of DOM in the form of objects) and then updates the UI. It doesn't compare the html elements. Hence React is faster.
 * Whenever there is a change in state variable, React will find out the diff b/w virtual DOM and re-renders the component
 * Why React is fast ? 
 * Because it does efffective DOM manipulation and 
 * React will be constantly monitoring the state variable and whenever it changes/updates react re-renders the component.
+* Whenever a state variable update, react triggers a Reconciliation cycle(re-renders the component).
 * React Fibre: New way of finding the diff and updating the DOM.
-Ep.06:
 * useEffect: It takes 2 arguments - Callback function and a dependant array
-* Syntax : useEffect(()=>{}, []);
+* Syntax : useEffect(() => {}, []);
 * The Callback function will be called after the component renders
 * As soon as the component's render cycle is completed, the callback function of useEffect will be invoked
 * Watch Akshay Saini's CORS video
-  
 
+Episode 06:
+* Monolith Architecture: 
+* Micro Services: All these micro services form a big whole app, all micro services talk to each other.
+    Micro Services follow Single responsibility principle: Each service has its own job and Separation of concerns.
+    Our app comes under UI micro service.
+* 2 ways data can be fetched from API
+    Page loads --> API(wait for data-500ms) --> Render the data
+    Page loads --> Render dummy UI till API fetches data --> API(wait for data-500ms) --> Re-render our app with new data
+* When you update the content of an element inside a Functional component then react will re-render the whole component not just the updated element. Please note that-here only the updated ele will be refreshed as the Reconciliation/diff would show only updated element.
+* Functional Component re-rendering is same as a function invoking again.
+* While using "useState" hook with a const variable, when the component re-renders-the whole new const variable is created with its updated content but not the old const variable is getting assigned with a new value(which is not possible in js).

@@ -22,8 +22,11 @@
     margin: 0px 20px;
     padding: 0px 10px;
 }
-.search{
-    margin: 10 0 0 30;
+.searchAndFilter{
+    margin: 10 0 0 30;   
+}
+.searchAndFilter > button{
+    margin: 10 0 0 20;
 }
 .foodCard{
     height: 260px;
@@ -70,7 +73,6 @@
     height: 220px;
     width: 250px;
     margin: 10 0 0 30;
-    padding: 5 5 0 5;
     border-radius: 15px;
     background-color: #ebebeb;
 }
