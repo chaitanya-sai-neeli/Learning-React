@@ -2,6 +2,7 @@ import RestoCard from "./RestoCard";
 import restList from "../utils/mockData";
 import { useState, useEffect } from "react";
 import Skeleton from "./Skeleton";
+import { Link } from "react-router-dom";
 
 const Body = () => {
     const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -66,7 +67,7 @@ const Body = () => {
                     {<RestoCard restData = {restList[1]}/>}
                     {<RestoCard restData = {restList[2]}/>} */}
             {listOfRestaurants.map((restaurant) => {
-                return <RestoCard key={restaurant.id} restData={restaurant}/>}
+                return <Link key={restaurant.id} to = {"/restaurants/" + restaurant.id} style={{ textDecoration: "none" }}><RestoCard restData={restaurant}/></Link>}
             )}
         </div>
         </div>

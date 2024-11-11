@@ -1,15 +1,18 @@
 import { useEffect, useState } from "react";
 import Skeleton from "./Skeleton";
+import { useParams } from "react-router-dom";
+import { MENU_API_URL } from "../utils/constants";
 
 const RestaurantMenu = () => {
     const [restInfo, setRestInfo] = useState(null);
+    const {resID} = useParams();
 
     useEffect(()=> {
         fetchMenu();
     },[])
     
     const fetchMenu = async() => {
-        const data = await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.4473863&lng=78.3713412&restaurantId=677399&catalog_qa=undefined&submitAction=ENTER");
+        const data = await fetch(MENU_API_URL + resID);
         const json = await data.json();
         console.log(json);
         setRestInfo(json.data);
@@ -22,7 +25,7 @@ const RestaurantMenu = () => {
 
     const {name, cuisines, costForTwoMessage} = restInfo?.cards?.[2]?.card?.card?.info || {};
     const itemName  = restInfo?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[2]?.card?.card?.itemCards?.[6]?.card?.info?.name || "No name available";
-    const {itemCards = []} = restInfo?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[2]?.card?.card;
+    const {itemCards = []} = restInfo?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[3]?.card?.card;
 
     return (
         <div>
