@@ -1,7 +1,7 @@
 const restList = [
   {
     restName: "Kulfi House",
-    id: 1234,
+    id: 33040,
     restCuisine: "Kulfi, Desserts",
     restRating: "4.0 *",
     delvTime: "25-30 mins",
@@ -10,7 +10,7 @@ const restList = [
   },
   {
     restName: "President Dhaba",
-    id: 1235,
+    id: 677399,
     restCuisine: "North Indian, Parota",
     restRating: "4.6 *",
     delvTime: "45-50 mins",

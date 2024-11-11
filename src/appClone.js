@@ -2,6 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import ErrorPage from "./components/ErrorPage";
+import RestaurantMenu from "./components/RestaurantMenu";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 const parent = React.createElement("div", {}, "I am a parent root container");
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -24,7 +29,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 //         </div>
 //     );
 // };
-
 // const RestoCard = (props) => { 
 //     const {restData} = props;
 //     const {restImageUrl, restName, restCuisine, delvTime, restRating} = restData || {};
@@ -40,7 +44,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 //         </div>
 //     );
 // }
-
 // const restList = [
 //     {
 //         restName : "Kulfi House",
@@ -83,7 +86,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 //         restImageUrl : "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/4/17/5d0c595a-dfb2-472b-8ca0-f4701adaa38d_774103.JPG"
 //     }
 // ]
-
 // const Body = () => {
 //     return(
 //         <div className = "bodyMain">
@@ -110,9 +112,44 @@ const AppLayout = () =>{
     return (
         <div id="parent" className="layout">
             <Header/>
-            <Body/>
+            <Outlet/>
         </div>
     );
 }
 
-root.render(<AppLayout/>);
+/*Creating the configuration:
+* imported createBrowserRouter from react-router-dom
+* it takes in some config 
+* Config is a list, list of objects
+* each object defines a diff path and what should happen in it
+* Router provider will provide us the routing config to our app
+* Router provider is a component
+*/
+const appRouter = createBrowserRouter([
+    {
+        path: "/",
+        element: <AppLayout />,
+        children: [
+            {
+                path: "/",
+                element: <Body />
+            },
+            {
+                path: "/about",
+                element: <About />
+            },
+            {
+                path: "/contact",
+                element: <Contact />
+            },
+            {
+                path: "/restaurants/:resID",
+                element: <RestaurantMenu />
+            }
+        ],
+        errorElement: <ErrorPage />,
+    },
+]);
+
+// root.render(<AppLayout/>);
+root.render(<RouterProvider router={appRouter} />)

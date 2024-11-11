@@ -69,3 +69,27 @@ Episode 06:
 * When you update the content of an element inside a Functional component then react will re-render the whole component not just the updated element. Please note that-here only the updated ele will be refreshed as the Reconciliation/diff would show only updated element.
 * Functional Component re-rendering is same as a function invoking again.
 * While using "useState" hook with a const variable, when the component re-renders-the whole new const variable is created with its updated content but not the old const variable is getting assigned with a new value(which is not possible in js).
+
+Episode 07:
+* useEffect will be called everytime the component renders, only callback function is mandatory inside useEffect not the dependant array.
+* If there is no dependency array then useEffect will be called everytime when component renders.
+* If dependency array is empty, then useEffect will be called only when the component renders for the 1st time.
+* If dependency array has something inside it, then useEffect will be called everytime the dependency array changes.
+* useState should only be used inside a functional component.
+* useState should be created at the start/top of functional component to avoid inconsistency and its a best practice.
+* Never use useState inside if-else conditional statements or loops, it doesn't make sense.
+* Router Configuration
+    1. Creating the configuration:
+    2. import createBrowserRouter from react-router-dom.
+    3. it takes in some config. 
+    4. Config is a list, list of objects.
+    5. each object defines a different path and what should happen in it.
+* Router provider is a component and it will provide us the routing config to use in our app.
+* React Router DOM gives us an access to imp. hook: useRouteError - gives us more info about the error encountered
+* When you are using react & if you wish to route to other page, we shouldn't use traditional anchor tags
+* Because anchor tags reloads the whole page where as Link tag only refreshes the components
+* Link component is a super power given to us by react-router-dom
+* 2 types of Routing in Web apps
+    1. Client Side Routing : No n/w calls. All components are in the app already. Just component loads accordingly.
+    2. Server Side Routing : Reloads the whole page => Sends n/w call to aboutUs.html --> fetches the html --> Renders it to Web page
+* Single Page Applications: Only 1 page would be there & only components would be interchanging via Client Side Routing.

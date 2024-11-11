@@ -19,11 +19,11 @@ const Body = () => {
         fetchData();
     }, []);    
 
-    const fetchData = ()=> {
-      // const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.4473863&lng=78.3713412&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
-      // const json = await data.json();
-      // setListOfRestaurants(json?.data?.cards[2]?.data?.data?.cards) //This is Optional Chaining
-      // console.log(json);
+    const fetchData = async ()=> {
+    //   const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.4473863&lng=78.3713412&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+    //   const json = await data.json();
+    //   setListOfRestaurants(json?.data?.cards[2]?.data?.data?.cards) //This is Optional Chaining
+    //   console.log(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
       setTimeout( () => {
         setListOfRestaurants(restList);
         setAllRestList(restList);

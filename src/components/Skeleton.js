@@ -11,4 +11,4 @@ const Skeleton = () =>{
     )
 }
 
-export default Skeleton
+export default Skeleton;
