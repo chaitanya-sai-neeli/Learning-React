@@ -40,7 +40,7 @@ Episode 04 :
     2. Named export/import      Ex: export const Header;
 
 Episode 05:
-* React hooks : These are normal JS utility functions. use State and use Effect. 
+* React hooks : These are normal JS utility functions given to us by react, it has some super powers. use State-used to create state variable and use Effect. 
 * Super Powerful state variable: 
   React will be constantly monitoring the state variable and Whenever it changes/updates react re-renders the component. 
 * Virtual DOM is the object representation of actual DOM.
