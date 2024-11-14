@@ -5,8 +5,8 @@ const ErrorPage = () => {
     console.log(err);
     return (
         <div>
-            <h1>{err.status} : {err.statusText}</h1>
-            <h2>Something went wrongg!</h2>
+            <h1>{err.status} : Page {err.statusText}</h1>
+            <h2>Something went wrong!</h2>
         </div>
     )
 }

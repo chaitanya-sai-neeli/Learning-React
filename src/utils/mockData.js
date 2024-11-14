@@ -1,12 +1,12 @@
 const restList = [
   {
-    restName: "Kulfi House",
+    restName: "Krimmy Thickshakes",
     id: 750845,
-    restCuisine: "Kulfi, Desserts",
+    restCuisine: "Milk shakes, Thick shakes",
     restRating: "4.0 *",
     delvTime: "25-30 mins",
     restImageUrl:
-      "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/auczcmkdvvxzt2mswvcc",
+      "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/tblyu7pexxqrxlhhdhzm",
   },
   {
     restName: "Rolls King",
