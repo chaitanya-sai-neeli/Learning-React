@@ -3,7 +3,7 @@ Episode 01 and Episode 02:
 * Packagelock.json keeps track of exact version, locks the version and keeps track of it.
 * There are 2 types of depedencies we can install:
     1. Dev dependencies (Mostly used in development phase)
-    2. Nomal dependencies (Used in production)
+    2. Normal dependencies (Used in production)
 * Transitive dependencies : Our Project --> Parcel --> dependencies --> dependencies
 * Parcel : Its a powerful bundler, it also helps in Dev build, Local Server, HMR (Hot Module Replacement) using File Watching Algorithm written in C++, Caching- Faster builds, Image Optimisation, Minification, Bundling, Compressing, Tree Shaking, Diagnostics, Code splitting, Differential bundling
 * With the help of package.json and packagelock.json-we can regenerate node modules, so we need not to push node_modules in to our Github
@@ -30,7 +30,7 @@ Syntax:
 * To insert a Functional component inside an other we need to wrap it in "<> </>"
 * Props in JS: Arguments to a function. Passing a prop to a component is same like passing an argument to a function
 * When we have to dynamically pass data to a component we do it using props
-* Config Driven UI: Client side UI is shown based upon the data/Config.
+* Config Driven UI: UI is displayed based upon the data/Config.
 
 Episode 04 :
 * Whenever we are using a map we need to assign a key for each element of an array.
@@ -66,7 +66,7 @@ Episode 06:
 * 2 ways data can be fetched from API
     Page loads --> API(wait for data-500ms) --> Render the data
     Page loads --> Render dummy UI till API fetches data --> API(wait for data-500ms) --> Re-render our app with new data
-* When you update the content of an element inside a Functional component then react will re-render the whole component not just the updated element. Please note that-here only the updated ele will be refreshed as the Reconciliation/diff would show only updated element.
+* When you update the content of an element inside a Functional component then react will re-render the whole component not just the updated element. Please note that-here only the updated element will be refreshed as the Reconciliation/diff would show only updated element.
 * Functional Component re-rendering is same as a function invoking again.
 * While using "useState" hook with a const variable, when the component re-renders-the whole new const variable is created with its updated content but not the old const variable is getting assigned with a new value(which is not possible in js).
 

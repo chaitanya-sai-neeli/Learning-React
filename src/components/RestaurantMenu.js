@@ -1,28 +1,14 @@
-import { useEffect, useState } from "react";
 import Skeleton from "./Skeleton";
 import { useParams } from "react-router-dom";
-import { MENU_API_URL } from "../utils/constants";
+import useRestaurantMenu from "../utils/useRestaurantMenu";
 
 const RestaurantMenu = () => {
-    const [restInfo, setRestInfo] = useState(null);
     const {resID} = useParams();
-
-    useEffect(()=> {
-        fetchMenu();
-    },[])
-    
-    const fetchMenu = async() => {
-        const data = await fetch(MENU_API_URL + resID);
-        const json = await data.json();
-        console.log(json);
-        setRestInfo(json.data);
-    }
+    const restInfo = useRestaurantMenu(resID);
 
     if(restInfo === null) return <Skeleton/>;
-
     // console.log("first : ", restInfo?.cards?.[2]?.card?.card?.info);
     // console.log("second : ", restInfo?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[2]?.card?.card?.itemCards?.[6]?.card?.info.name);
-
     const {name, cuisines, costForTwoMessage} = restInfo?.cards?.[2]?.card?.card?.info || {};
     const itemName  = restInfo?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[2]?.card?.card?.itemCards?.[6]?.card?.info?.name || "No name available";
     const {itemCards = []} = restInfo?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[3]?.card?.card;
