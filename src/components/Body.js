@@ -3,6 +3,7 @@ import restList from "../utils/mockData";
 import { useState, useEffect } from "react";
 import Skeleton from "./Skeleton";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
     const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -46,6 +47,11 @@ const Body = () => {
         });
         setListOfRestaurants(filteredRestaurants);
     };
+    
+    const onlineStatus = useOnlineStatus();
+    if(!onlineStatus){
+        return <h1>Looks like you are offline! Please check your internet connection.</h1>
+    }
 
     // if (loading) return <Skeleton/>     //this is conditional rendering: Rendering according to a condition
     return loading ? <Skeleton/> : (

@@ -5,7 +5,7 @@ Episode 01 and Episode 02:
     1. Dev dependencies (Mostly used in development phase)
     2. Normal dependencies (Used in production)
 * Transitive dependencies : Our Project --> Parcel --> dependencies --> dependencies
-* Parcel : Its a powerful bundler, it also helps in Dev build, Local Server, HMR (Hot Module Replacement) using File Watching Algorithm written in C++, Caching- Faster builds, Image Optimisation, Minification, Bundling, Compressing, Tree Shaking, Diagnostics, Code splitting, Differential bundling
+* Parcel : It's a powerful bundler, it also helps in Dev build, Local Server, HMR (Hot Module Replacement) using File Watching Algorithm written in C++, Caching- Faster builds, Image Optimisation, Minification, Bundling, Compressing, Tree Shaking, Diagnostics, Code splitting, Differential bundling
 * With the help of package.json and packagelock.json-we can regenerate node modules, so we need not to push node_modules in to our Github
 * npm - this is a calling command of npm where as npx means executing a npm package parcel with a source file as index.html 
 * Till this point we were using React from CDN links but from now on we will be using react from node modules.
