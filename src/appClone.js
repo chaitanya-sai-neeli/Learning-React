@@ -6,11 +6,15 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import ErrorPage from "./components/ErrorPage";
 import RestaurantMenu from "./components/RestaurantMenu";
+// import Groceries from "./components/Groceries";
+import { Suspense, lazy } from "react";
+import Skeleton from "./components/Skeleton";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 const parent = React.createElement("div", {}, "I am a parent root container");
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(parent);
+const Groceries = lazy(() => import("./components/Groceries"));
 
 // const Header = () => {
 //     return (
@@ -141,6 +145,10 @@ const appRouter = createBrowserRouter([
             {
                 path: "/contact",
                 element: <Contact />
+            },
+            {
+                path: "/groceries",
+                element: <Suspense fallback={<Skeleton/>}> <Groceries /> </Suspense>
             },
             {
                 path: "/restaurants/:resID",
