@@ -56,13 +56,13 @@ const Body = () => {
     // if (loading) return <Skeleton/>     //this is conditional rendering: Rendering according to a condition
     return loading ? <Skeleton/> : (
         <div className="bodyMain">
-        <div className="searchAndFilter">
-            <input type="text" placeholder="search for food " value = {searchText} onChange={(e) => {setSearchText(e.target.value)}}></input>
-            <button className = "searchBtn" onClick={handleSearch}>Search</button>
+        <div className="my-3.5 ml-8">
+            <input type="text" placeholder="search for food " className=" ml-8 border border-black rounded-md" value = {searchText} onChange={(e) => {setSearchText(e.target.value)}}></input>
+            <button className = "mx-2.5 px-3.5 bg-gray-400 rounded-md" onClick={handleSearch}>Search</button>
 
-            <button className="filterBtn" onClick={handleFilter}>Filter by 4 rating</button>
+            <button className="mx-2.5 px-3.5 bg-gray-400 rounded-md" onClick={handleFilter}>Filter by 4 rating</button>
         </div>
-        <div className="foodCardContainer">
+        <div className="flex flex-wrap my-3.5 ml-8">
             {/* Below is the basic/initial way of passing props to a component */}
             {/* https://youtu.be/E2tbZoTjcQA */}
             {/* <RestoCard restName="Kulfi House" restCuisine="Kulfi, Desserts, Cup Cakes" restRating="4.2 *" 
