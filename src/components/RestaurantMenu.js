@@ -43,10 +43,16 @@ const RestaurantMenu = () => {
         />
       ))}
       {/* <ul>
-                {itemCards.map((item)=> { 
-                    return <li key= {item.card.info.id}>{item.card.info.name} {"-Rs."} {Math.floor(item.card.info.price/100) || Math.floor(item.card.info.defaultPrice/100)}</li>
-                })}
-            </ul> */}
+        {itemCards.map((item) => {
+          return (
+            <li key={item.card.info.id}>
+              {item.card.info.name} {"-Rs."}{" "}
+              {Math.floor(item.card.info.price / 100) ||
+                Math.floor(item.card.info.defaultPrice / 100)}
+            </li>
+          );
+        })}
+      </ul> */}
     </div>
   );
 };
