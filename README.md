@@ -158,3 +158,11 @@ Syntax:
 * This improves modularity in code, maintainable and testable easily.
 * `Lazy loading:` It's used to distribute the code in to different chunks.
 * It is also known as Chunking, Code Splitting, Dynamic bundling, Ondemand loading, Dynamic import.
+
+# Episode 10:
+* Different ways to style UI in projects- SCSS & SaSS, Styled components, Bootstrap, Material UI, Chakra UI, Ant Design, Tailwind CSS etc..
+* Post CSS: It is a tool for transforming CSS with javascript, Tailwind CSS inernally use Post CSS
+* tailwind.config.js is configuration for tailwind CSS and .postcssrc is a configuration for Post CSS.
+* .postcssrc: Parcel(our bundler) needs .postcssrc to read Tailwind 
+* .postcssrc is used to understand tailwind, its a kind of way that our projects understand whats inside Tailwind
+* `Higher Order Component` : It takes in a component as an input, enhances it and returns a component

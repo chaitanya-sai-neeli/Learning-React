@@ -153,4 +153,4 @@ Episode 10:
 * tailwind.config.js is configuration for tailwind CSS and .postcssrc is a configuration for Post CSS.
 * .postcssrc: Parcel(our bundler) needs .postcssrc to read Tailwind 
 * .postcssrc is used to understand tailwind, its a kind of way that our projects understand whats inside Tailwind
-* 
+* Higher Order Component : It takes in a component as an input, enhances it and returns a component

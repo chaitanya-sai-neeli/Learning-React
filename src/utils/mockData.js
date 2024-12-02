@@ -5,6 +5,7 @@ const restList = [
     restCuisine: "Milk shakes, Thick shakes",
     restRating: "4.0 *",
     delvTime: "25-30 mins",
+    promoted: true,
     restImageUrl:
       "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/tblyu7pexxqrxlhhdhzm",
   },
@@ -14,6 +15,7 @@ const restList = [
     restCuisine: "Rolls, Wraps, Fast-food",
     restRating: "3.8 *",
     delvTime: "15-20 mins",
+    promoted: false,
     restImageUrl:
       "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/swqonxjf0mv406jhzt9t",
   },
@@ -23,6 +25,7 @@ const restList = [
     restCuisine: "Bakery, Desserts, Sweets",
     restRating: "4.7 *",
     delvTime: "26-32 mins",
+    promoted: true,
     restImageUrl:
       "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/10/25/e34f65ba-aa4b-46be-90cd-a096f2f75b53_511927www.jpg",
   },
@@ -32,6 +35,7 @@ const restList = [
     restCuisine: "Pizza, Momos, Burgers",
     restRating: "3.1 *",
     delvTime: "25-30 mins",
+    promoted: false,
     restImageUrl:
       "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/d20fdc8c86aa8bd0638f47dd013d46f9",
   },
@@ -41,6 +45,7 @@ const restList = [
     restCuisine: "Chicken bucket, Rolls, Desserts",
     restRating: "4.2 *",
     delvTime: "35-40 mins",
+    promoted: true,
     restImageUrl:
       "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/4/17/5d0c595a-dfb2-472b-8ca0-f4701adaa38d_774103.JPG",
   },
@@ -50,6 +55,7 @@ const restList = [
     restCuisine: "Bakery, Sweets, Desserts",
     restRating: "3.9 *",
     delvTime: "15-20 mins",
+    promoted: false,
     restImageUrl:
       "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/31ea22eda5c6e935f04f45e97e54b5d6"
   }

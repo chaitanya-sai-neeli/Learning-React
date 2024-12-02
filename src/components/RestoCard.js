@@ -14,4 +14,16 @@ const RestoCard = (props) => {
     );
 }
 
+//Higher Order Component
+export const WithPromotedLabel = (RestoCard) =>{
+    return (props) => {
+        return (
+            <div>
+                <label className =" absolute bg-[#242420] text-white rounded-lg m-2 p-1 ">Promoted</label>
+                <RestoCard{...props}/>
+            </div>
+        )
+    }
+} 
+
 export default RestoCard;

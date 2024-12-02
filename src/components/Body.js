@@ -1,4 +1,4 @@
-import RestoCard from "./RestoCard";
+import RestoCard, {WithPromotedLabel} from "./RestoCard";
 import restList from "../utils/mockData";
 import { useState, useEffect } from "react";
 import Skeleton from "./Skeleton";
@@ -15,8 +15,8 @@ const Body = () => {
     arr[0] = listOfRestaurants;
     arr[1] = setListOfRestaurants;*/
     const [searchText, setSearchText] = useState("");
-    const [loading, setLoading] = useState(true); // New state for loading
-
+    const [loading, setLoading] = useState(true);   // New state for loading till we get actual data from API
+    const PromotedRestauarant = WithPromotedLabel(RestoCard);   //Higher order component
     useEffect(()=>{
         fetchData();
     }, []);    
@@ -73,7 +73,8 @@ const Body = () => {
                     {<RestoCard restData = {restList[1]}/>}
                     {<RestoCard restData = {restList[2]}/>} */}
             {listOfRestaurants.map((restaurant) => {
-                return <Link key={restaurant.id} to = {"/restaurants/" + restaurant.id} style={{ textDecoration: "none" }}><RestoCard restData={restaurant}/></Link>}
+                return <Link key={restaurant.id} to = {"/restaurants/" + restaurant.id} style={{ textDecoration: "none" }}> 
+                {restaurant.promoted ? (<PromotedRestauarant restData={restaurant}/>) : (<RestoCard restData={restaurant}/>)}</Link>}
             )}
         </div>
         </div>
