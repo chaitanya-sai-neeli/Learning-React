@@ -2,10 +2,12 @@ import Skeleton from "./Skeleton";
 import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 import RestaurantCategory from "./RestaurantCategory";
+import { useState } from "react";
 
 const RestaurantMenu = () => {
   const { resID } = useParams();
   const restInfo = useRestaurantMenu(resID);
+  const [showIndex, setShowIndex] = useState(0);
 
   if (restInfo === null) return <Skeleton />;
   // console.log("first : ", restInfo?.cards?.[2]?.card?.card?.info);
@@ -31,10 +33,13 @@ const RestaurantMenu = () => {
       <p className="font-bold">
         {cuisines.join(", ")} - {costForTwoMessage || "No cost information"}
       </p>
-      {categories.map((category) => (
+      {categories.map((category, index) => (
+        //Controlled Component
         <RestaurantCategory
           key={category?.card?.card.title}
           data={category?.card?.card}
+          showItems={index === showIndex ? true : false}
+          setShowIndex={() => setShowIndex(index === showIndex ? null : index)}
         />
       ))}
       {/* <ul>
