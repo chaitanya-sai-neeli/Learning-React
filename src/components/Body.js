@@ -1,9 +1,10 @@
 import RestoCard, { WithPromotedLabel } from "./RestoCard";
 import restList from "../utils/mockData";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Skeleton from "./Skeleton";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -57,6 +58,8 @@ const Body = () => {
     );
   }
 
+  const { loggedInUser, setUserName } = useContext(UserContext);
+
   // if (loading) return <Skeleton/>     //this is conditional rendering: Rendering according to a condition
   return loading ? (
     <Skeleton />
@@ -66,25 +69,31 @@ const Body = () => {
         <input
           type="text"
           placeholder="search for food "
-          className=" ml-8 border border-black rounded-md"
+          // className=" ml-8 border border-black rounded-md"
+          className="px-3 py-1 rounded-md bg-blue-100 text-blue-700 focus:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-300 transition ease-in-out duration-200"
           value={searchText}
           onChange={(e) => {
             setSearchText(e.target.value);
           }}
         ></input>
         <button
-          className="mx-2.5 px-3.5 bg-gray-400 rounded-md"
+          className="mx-2.5 px-3.5 py-1 bg-blue-100 text-blue-700 hover:bg-blue-200 hover:shadow-md transition ease-in-out duration-200 rounded-md"
           onClick={handleSearch}
         >
-          Search
+          🔍
         </button>
 
         <button
-          className="mx-2.5 px-3.5 bg-gray-400 rounded-md"
+          className="mx-2.5 px-3.5 py-1  bg-blue-100 text-blue-700 hover:bg-blue-200 hover:shadow-md transition ease-in-out duration-200 rounded-md"
           onClick={handleFilter}
         >
           Filter by 4 rating
         </button>
+        <input
+          className="px-3 py-1 rounded-md bg-blue-100 text-blue-700 focus:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-300 transition ease-in-out duration-200"
+          value={loggedInUser}
+          onChange={(e) => setUserName(e.target.value)}
+        ></input>
       </div>
       <div className="flex flex-wrap my-3.5 ml-8">
         {/* Below is the basic/initial way of passing props to a component */}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -11,6 +11,7 @@ import { Suspense, lazy } from "react";
 import Skeleton from "./components/Skeleton";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Footer from "./components/Footer";
+import UserContext from "./utils/UserContext";
 
 const parent = React.createElement("div", {}, "I am a parent root container");
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -114,11 +115,21 @@ const Groceries = lazy(() => import("./components/Groceries"));
 // }
 
 const AppLayout = () => {
+  const [userName, setUserName] = useState();
+
+  useEffect(() => {
+    const data = {
+      name: "Neeli Chaitanya Sai",
+    };
+    setUserName(data.name);
+  }, []);
   return (
     <div id="parent" className="layout">
-      <Header />
-      <Outlet />
-      <Footer />
+      <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+        <Header />
+        <Outlet />
+        <Footer />
+      </UserContext.Provider>
     </div>
   );
 };

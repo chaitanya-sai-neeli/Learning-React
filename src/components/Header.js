@@ -38,13 +38,13 @@ const Header = () => {
                 btnNameReact === "Login"
                   ? setbtnNameReact("Logout")
                   : setbtnNameReact("Login");
-                console.log(btnNameReact);
+                // console.log(btnNameReact);
               }}
             >
               {btnNameReact}
             </button>
           </li>
-          {/* <li className="pr-6 m-3 font-semibold">{loggedInUser}</li> */}
+          <li className="pr-6 m-3 font-semibold">{loggedInUser}</li>
         </ul>
       </div>
     </div>
