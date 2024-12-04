@@ -154,3 +154,13 @@ Episode 10:
 * .postcssrc: Parcel(our bundler) needs .postcssrc to read Tailwind 
 * .postcssrc is used to understand tailwind, its a kind of way that our projects understand whats inside Tailwind
 * Higher Order Component : It takes in a component as an input, enhances it and returns a component
+
+Episode 11:
+* Context : If we need some data to be accessed anywhere in our app, we hold that data inside a context and this context can be used anywhere in our app.
+* Context is one of the way to resolve the problem of Props Drilling.
+* syntax: const UserContext = createContext({}), We hold data in curlybraces for making it accessible anywhere in the project.
+* To use Context anywhere, we need a hook called as UseContext. Ex: const data = UseContext(UserContext)
+* To use Context in a class based component we would use it within JSX which has a callback function 
+    <UserContext.Consumer>
+        {(data) => (<h1>data<h1/>)}
+    </UserContext.Consumer>
