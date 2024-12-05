@@ -25,9 +25,11 @@ const ItemList = ({ itemData }) => {
             </p>
           </div>
           <div className="w-3/12 m-1">
-            {/* <div className = "absolute">
-                            <button className="bg-white text-green-700 font-bold px-8 border-2 rounded-lg my-[110] mx-8">ADD</button>
-                        </div> */}
+            <div className="absolute">
+              <button className="bg-white text-green-700 font-bold px-8 border-2 rounded-lg my-[110] mx-8 cursor-pointer">
+                ADD
+              </button>
+            </div>
             {item.card.info.imageId && (
               <img
                 src={ITEM_URL + item.card.info.imageId}

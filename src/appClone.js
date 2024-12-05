@@ -12,6 +12,8 @@ import Skeleton from "./components/Skeleton";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Footer from "./components/Footer";
 import UserContext from "./utils/UserContext";
+import { Provider } from "react-redux";
+import appStore from "./redux/appStore";
 
 const parent = React.createElement("div", {}, "I am a parent root container");
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -123,13 +125,16 @@ const AppLayout = () => {
     };
     setUserName(data.name);
   }, []);
+
   return (
     <div id="parent" className="layout">
-      <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
-        <Header />
-        <Outlet />
-        <Footer />
-      </UserContext.Provider>
+      <Provider store={appStore}>
+        <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+          <Header />
+          <Outlet />
+          <Footer />
+        </UserContext.Provider>
+      </Provider>
     </div>
   );
 };

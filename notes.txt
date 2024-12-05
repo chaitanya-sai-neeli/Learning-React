@@ -158,9 +158,23 @@ Episode 10:
 Episode 11:
 * Context : If we need some data to be accessed anywhere in our app, we hold that data inside a context and this context can be used anywhere in our app.
 * Context is one of the way to resolve the problem of Props Drilling.
-* syntax: const UserContext = createContext({}), We hold data in curlybraces for making it accessible anywhere in the project.
+* Syntax for Creating Context: const UserContext = createContext({}), We hold data in curlybraces for making it accessible anywhere in the project.
 * To use Context anywhere, we need a hook called as UseContext. Ex: const data = UseContext(UserContext)
 * To use Context in a class based component we would use it within JSX which has a callback function 
     <UserContext.Consumer>
         {(data) => (<h1>data<h1/>)}
     </UserContext.Consumer>
+    
+Episode 12: 
+* Redux store: It's sort of a big JS Object kept in central global space.
+* Slice: Part of Redux store, a small portion. To keep data separately, logical partitions are made which are called as Slices.
+    Ex: User slice, Cart slice, Theme slice
+* Add button is clicked > It will dispatch an action > which would call a function(Reducer) > function modifies the cart ie; modifies the slice
+* Selector: Using a selector we can subscribe to the store, Selector will read the data from store and modify the react component.
+* The above phenomenon is called as subscribing to the store (in sync with store)
+* Installed @reduxjs/toolkit and react-redux 
+* Creating Store: To create our own store we use ConfigureStore which will be imported from @reduxjs/toolkit
+* Providing store: To provide our store to the application we use Provider which will be imported from react-redux 
+* Provider will take a store as props for it. Syntax: <Provider store = {appStore}></Provider>  
+* Creating Slice: To create a slice we use CreateSlice which will be imported from @reduxjs/toolkit
+* CreateSlice will take a config: name, initial state, reducer-Object which has actions(addItem, removeItem etc..)
