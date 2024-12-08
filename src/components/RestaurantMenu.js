@@ -10,9 +10,9 @@ const RestaurantMenu = () => {
   const [showIndex, setShowIndex] = useState(0);
 
   if (restInfo === null) return <Skeleton />;
-  // console.log("first : ", restInfo?.cards?.[2]?.card?.card?.info);
-  // console.log("second : ", restInfo?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[2]?.card?.card?.itemCards?.[6]?.card?.info.name);
-  // const itemName  = restInfo?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[2]?.card?.card?.itemCards?.[6]?.card?.info?.name || "No name available";
+  /*console.log("first : ", restInfo?.cards?.[2]?.card?.card?.info);
+  console.log("second : ", restInfo?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[2]?.card?.card?.itemCards?.[6]?.card?.info.name);
+  const itemName  = restInfo?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[2]?.card?.card?.itemCards?.[6]?.card?.info?.name || "No name available";*/
   const { name, cuisines, costForTwoMessage } =
     restInfo?.cards?.[2]?.card?.card?.info || {};
   const { itemCards = [] } =

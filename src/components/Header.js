@@ -10,6 +10,9 @@ const Header = () => {
   const [btnNameReact, setbtnNameReact] = useState("Login");
   const onlineStatus = useOnlineStatus();
   const { loggedInUser } = useContext(UserContext);
+  //Subscribing to the store using selector
+  const cartItems = useSelector((store) => store.cart.items);
+  console.log(cartItems);
 
   return (
     <div className="flex bg-pink-100 h-24 border-black justify-between">
@@ -31,7 +34,9 @@ const Header = () => {
           <li className="pr-6 m-3">
             <Link to="/Groceries">Groceries</Link>
           </li>
-          <li className="pr-6 m-3">Cart</li>
+          <li className="pr-6 m-3 font-semibold">
+            <Link to="/Cart">Cart - ({cartItems.length} items)</Link>
+          </li>
           <li className="pr-6 m-3">
             <button
               className="btnlogin"

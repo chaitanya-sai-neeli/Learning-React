@@ -14,6 +14,7 @@ import Footer from "./components/Footer";
 import UserContext from "./utils/UserContext";
 import { Provider } from "react-redux";
 import appStore from "./redux/appStore";
+import Cart from "./components/Cart";
 
 const parent = React.createElement("div", {}, "I am a parent root container");
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -176,6 +177,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/restaurants/:resID",
         element: <RestaurantMenu />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
     errorElement: <ErrorPage />,
