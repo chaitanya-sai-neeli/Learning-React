@@ -11,7 +11,7 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
   const { loggedInUser } = useContext(UserContext);
   //Subscribing to the store using selector
-  const cartItems = useSelector((store) => store.cart.items);
+  const cartItems = useSelector((store) => store.cart.items); //need access only to a portion of store ie; items
   console.log(cartItems);
 
   return (

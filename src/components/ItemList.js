@@ -6,7 +6,7 @@ const ItemList = ({ itemData }) => {
   // console.log("itemData=" , itemData)
   const dispatch = useDispatch();
   const handleAddItem = (item) => {
-    dispatch(addItem(item));
+    dispatch(addItem(item)); //parameter-item will go in to action.payload in cartSlice reducer
   };
   return (
     <div>

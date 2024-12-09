@@ -169,7 +169,7 @@ Episode 12:
 * Redux store: It's sort of a big JS Object kept in central global space.
 * Slice: Part of Redux store, a small portion. To keep data separately, logical partitions are made which are called as Slices.
     Ex: User slice, Cart slice, Theme slice
-* Add button is clicked > It will dispatch an action > which would call a function(Reducer) > function modifies the cart ie; modifies the slice
+* Add button is clicked > It will dispatch an action > which would call a function(Reducer) > function modifies the cart ie; modifies the slice of the store > Header is subscribed to store > If data inside store changes then > Header is updated
 * Selector: Using a selector we can subscribe to the store, Selector will read the data from store and modify the react component.
 * The above phenomenon is called as subscribing to the store (in sync with store)
 * Installed @reduxjs/toolkit and react-redux 
@@ -178,3 +178,23 @@ Episode 12:
 * Provider will take a store as props for it. Syntax: <Provider store = {appStore}></Provider>  
 * Creating Slice: To create a slice we use CreateSlice which will be imported from @reduxjs/toolkit
 * CreateSlice will take a config: name, initial state, reducer-Object which has actions(addItem, removeItem etc..)
+* When using useSelector-make sure you are subscribing to the right portion of the store. {Impacts Performace}
+* In older versions of Redux(Vanilla redux) : We shouldn't mutate the state directly, instead we need to have a copy of state and modify it as below:
+addItem: (state, action){
+    const newState = [...state];
+    newState.items.push(action.payload);
+    return newState;
+}
+* In newer version we have to mutate the state directly: 
+addItem: (state, action){
+    state.items.push(action.payload);
+}
+* Redux still does the same older way of copying a state & modifying it internally but just developers don't have to do it explicitly.
+* Redux uses "immer" library for finding the diff b/w original and mutated state and gives us back the new state ie; immutable state.
+* The process of older way of not mutating the state is abstracted with the help of immer.
+* In below action
+emptyCart(state, action) {
+    state.items.length = 0;     //will modify the original state
+    state[];    //will not modify the original state
+    return { items: [] };   //will empty [] will replace the original state 
+},

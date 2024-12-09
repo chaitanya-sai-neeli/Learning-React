@@ -8,7 +8,7 @@ const cartSlice = createSlice({
   reducers: {
     //reducer functions with actions as addItem, removeItem, emptyCart
     addItem: (state, action) => {
-      //mutating the state here
+      //mutating the state directly here and Redux uses immer behind the scenes
       state.items.push(action.payload);
     },
     removeItem: (state, action) => {
