@@ -18,3 +18,6 @@ export const PLAYSTORE_PAGE_URL =
 
 export const APPSTORE_PAGE_URL =
   "https://apps.apple.com/in/app/swiggy-food-instamart-dineout/id989540920?referrer=utm_source%3Dswiggy%26utm_medium%3Dhomepage";
+
+export const EMPTYCART_IMAGE =
+  "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/2xempty_cart_yfxml0";
