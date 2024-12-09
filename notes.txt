@@ -198,3 +198,16 @@ emptyCart(state, action) {
     state[];    //will not modify the original state
     return { items: [] };   //will empty [] will replace the original state 
 },
+
+Episode 13:
+* Unit Testing
+* Integration Testing
+* End to End Testing (e2e Testing)
+* React Test Library- Standard library used to write test cases in react
+* Jest: JavaScript testing framework
+* React test library used Jest internally.
+* Installed React Testing Library, Jest
+* Installed depedencies to use babel along with Jest
+* Configured Babel dependencies
+* Now we already have Parcel in our project which internally uses Babel, since we again added babel.config.js file the babel inside parcel will conflict with the config we setup. 
+* To overcome this we need to configure our Parcel config to disable default Babel transpilation in Parcel
