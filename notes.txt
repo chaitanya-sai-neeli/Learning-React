@@ -206,8 +206,22 @@ Episode 13:
 * React Test Library- Standard library used to write test cases in react
 * Jest: JavaScript testing framework
 * React test library used Jest internally.
-* Installed React Testing Library, Jest
+* Installed React Testing Library and Jest
 * Installed depedencies to use babel along with Jest
 * Configured Babel dependencies
 * Now we already have Parcel in our project which internally uses Babel, since we again added babel.config.js file the babel inside parcel will conflict with the config we setup. 
-* To overcome this we need to configure our Parcel config to disable default Babel transpilation in Parcel
+* To overcome this we need to configure our Parcel config to disable default Babel transpilation in Parcel.
+* Jest configuration: npx jest --init; this will initialise jest and creates a new configuration file for jest.
+* In the above process we need jsdom
+* Jsdom : It is a JavaScript-based headless browser that can be used to create a realistic testing environment.
+* It provides a environment to run the test cases.
+* According to "https://testing-library.com/docs/react-testing-library/setup" If you're using Jest 28 or later, jest-environment-jsdom package now must be installed separately.
+* Install JSdom library:  npm install --save-dev jest-environment-jsdom
+* To run the test cases: npm run test
+* We need to create a folder __test__ so that Jest will search for files with .js/.ts and they will be considered as test files
+* It also searches for fileName.test.js or fileName.spec.js
+* testMatch: **/__tests__/**/*.[jt]s?(x), **/?(*.)+(spec|test).[tj]s?(x) - 0 matches (Above point explained this)
+* When testing a UI Component inside react you will have to render that component in to JsDOM first
+* Installed @babel/preset-react library to make JSX work in test cases
+* Need to include @babel/preset-react inside babel config, @babel/preset-react helps testing library to convert jsx in to html code.
+* Installed @testing-library/jest-dom
