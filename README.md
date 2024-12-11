@@ -6,7 +6,7 @@ Learing react js from scratch as a beginner.
   1. `Dev dependencies (Mostly used in development phase)`
   2. `Nomal dependencies (Used in production)`
 - Transitive dependencies : Our Project --> Parcel --> dependencies --> dependencies
-- `Parcel` : Powerful is a bundler it also helps in Dev build, Local Server, HMR (Hot Module Replacement) using File Watching Algorithm written in C++, Caching- Faster builds, Image Optimisation, Minification, Bundling, Compressing, Tree Shaking, Diagonostics, Code splitting, Differential bundling
+- `Parcel` : Parcel is a bundler, it also helps in Dev build, Local Server, HMR (Hot Module Replacement) using File Watching Algorithm written in C++, Caching- Faster builds, Image Optimisation, Minification, Bundling, Compressing, Tree Shaking, Diagonostics, Code splitting, Differential bundling
 - With the help of package.json and packagelock.json-we can regenerate node modules, so we need not to push node_modules in to our Github
 - npm - calling command of npm where as npx means executing a npm package parcel with a source file as index.html
 - Till this point we were using React from CDN links but from now on we will be using react from node modules.
@@ -58,7 +58,7 @@ Learing react js from scratch as a beginner.
 
 # Episode 05:
 
-- `React hooks :` These are normal JS utility functions given to us by react, it has some super powers. use State-used to create state variable and use Effect.
+- `React hooks :` These are normal JS utility functions given to us by react, it has some super powers. use State-used to create state variables and use Effect is for handling api calls and data feteching.
 - Super Powerful state variable:
   React will be constantly monitoring the state variable and Whenever it changes/updates react re-renders the component.
 - const [name, setName] = useState("Chaitanya Sai");
@@ -80,6 +80,9 @@ Learing react js from scratch as a beginner.
 - Syntax : useEffect(() => {}, []);
 - The Callback function will be called after the component renders
 - As soon as the component's render cycle is completed, the callback function of useEffect will be invoked
+- If there is no dependency array then useEffect will be called everytime when component renders.
+- If dependency array is empty, then useEffect will be called only when the component renders for the 1st time.
+- If dependency array has something inside it, then useEffect will be called everytime the dependency array changes.
 - Watch Akshay Saini's CORS video
 
 # Episode 06:
@@ -123,7 +126,7 @@ Learing react js from scratch as a beginner.
 # Episode 08:
 
 - `Class based Components`: Older way of creating Components.
-- Its a JS class(that extends React.Component) which has a render menthod which returns a piece of jsx.
+- Its a JS class(that extends React.Component) which has a render method which returns a piece of jsx.
 - React.Component is a class given to us by React.
 - Passing Props to Class based components
   constructor(props){
@@ -152,7 +155,7 @@ Learing react js from scratch as a beginner.
   ----------------(React batches the render phase of 1st & 2nd child components)------------------
   First Child Constructor
   First Child Render  
-   Second Child Constructor
+  Second Child Constructor
   Second Child Render
   ----------------(React batches the commit phase of 1st & 2nd child components)------------------
   <--DOM is updated-->

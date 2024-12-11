@@ -3,7 +3,7 @@ const RestoCard = (props) => {
   const { restImageUrl, restName, restCuisine, delvTime, restRating } =
     restData || {};
   return (
-    <div className="foodCard hover:bg-[#f0f0f0] hover:shadow-[1px_1px_5px_grey] hover:border hover:border-[#808080] h-64 w-60 p-1.5 mt-2.5 my-3.5 ml-6 rounded-2xl ">
+    <div className="foodCard hover:bg-[#f0f0f0] hover:shadow-[1px_1px_5px_grey] hover:border hover:border-[#808080] h-64 w-60 p-1.5 mt-2.5 my-3.5 ml-6 rounded-2xl bg-blue-100">
       <img
         className="foodImage h-[65%] w-full rounded-2xl"
         src={restImageUrl}
