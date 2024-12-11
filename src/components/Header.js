@@ -12,7 +12,7 @@ const Header = () => {
   const { loggedInUser } = useContext(UserContext);
   //Subscribing to the store using selector
   const cartItems = useSelector((store) => store.cart.items); //need access only to a portion of store ie; items
-  console.log(cartItems);
+  // console.log(cartItems);
 
   return (
     <div className="flex bg-pink-100 h-24 border-black justify-between">

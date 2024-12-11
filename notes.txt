@@ -244,3 +244,4 @@ Episode 13:
         test("", () => {})
         test("", () => {})
     });
+* Whenever we are using a fetch or state updates wrap the render method in to a act function    

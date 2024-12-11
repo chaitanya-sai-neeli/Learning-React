@@ -6,7 +6,8 @@
     "test": "jest",
     "start": "parcel index.html",
     "build": "parcel build index.html",
-    "begin": "parcel src/appClone.html"
+    "begin": "parcel src/appClone.html",
+    "watch-test": "jest --watch"
   },
   "repository": {
     "type": "git",
