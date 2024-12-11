@@ -77,12 +77,12 @@ Learing react js from scratch as a beginner.
 - Whenever a state variable update, react triggers a Reconciliation cycle(re-renders the component).
 - `React Fibre`: New way of finding the diff and updating the DOM.
 - `useEffect`: It takes 2 arguments - Callback function and a dependant array
-- Syntax : useEffect(() => {}, []);
+- `Syntax :` useEffect(() => {}, []);
 - The Callback function will be called after the component renders
 - As soon as the component's render cycle is completed, the callback function of useEffect will be invoked
-- If there is no dependency array then useEffect will be called everytime when component renders.
-- If dependency array is empty, then useEffect will be called only when the component renders for the 1st time.
-- If dependency array has something inside it, then useEffect will be called everytime the dependency array changes.
+- If there is `no dependency array` then useEffect will be called `everytime when component renders.`
+- If `dependency array is empty,` then useEffect will be called only when the `component renders for the 1st time.`
+- If `dependency array has something` inside it, then useEffect will be called `everytime the dependency array changes.`
 - Watch Akshay Saini's CORS video
 
 # Episode 06:
@@ -101,9 +101,9 @@ Learing react js from scratch as a beginner.
 # Episode 07:
 
 - `useEffect` will be called everytime the component renders, only callback function is mandatory inside useEffect not the dependant array.
-- If there is no dependency array then useEffect will be called everytime when component renders.
-- If dependency array is empty, then useEffect will be called only when the component renders for the 1st time.
-- If dependency array has something inside it, then useEffect will be called everytime the dependency array changes.
+- If there is `no dependency array` then useEffect will be called `everytime when component renders`.
+- If `dependency array is empty,` then useEffect will be called only when the `component renders for the 1st time`.
+- If `dependency array has something inside it,` then useEffect will be called `everytime the dependency array changes`.
 - useState should only be used inside a functional component.
 - useState should be created at the start/top of functional component to avoid inconsistency and its a best practice.
 - Never use useState inside if-else conditional statements or loops, it doesn't make sense.
@@ -146,23 +146,23 @@ Learing react js from scratch as a beginner.
 - Reference link : "https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/"
 - API calls will be made inside componentDidMount
 - `Component life cycle`:
-  1. Render phase : constructor, render
+  1. `Render phase : constructor, render`
      -->React updates the DOM
-  2. Commit phase : componentDidMount
+  2. `Commit phase : componentDidMount`
 - If there are 2 child class components inside of a parent Class component then the life cycle would be as follows-
-  Parent Constructor
-  Parent Render
+  `Parent Constructor`
+  `Parent Render`
   ----------------(React batches the render phase of 1st & 2nd child components)------------------
-  First Child Constructor
-  First Child Render  
-  Second Child Constructor
-  Second Child Render
+  `First Child Constructor`
+  `First Child Render`
+  `Second Child Constructor`
+  `Second Child Render`
   ----------------(React batches the commit phase of 1st & 2nd child components)------------------
   <--DOM is updated-->
-  First Child componentDidMount  
-   Second Child componentDidMount
-  Parent componentDidMount
-- Constructor > Render > DOM Update > ComponentDidMount > ComponentDidUpdate > ComponentWillUnmount
+  `First Child componentDidMount`
+  `Second Child componentDidMount`
+  `Parent componentDidMount`
+- `Constructor > Render > DOM Update > ComponentDidMount > ComponentDidUpdate > ComponentWillUnmount`
 
 # Episode 09:
 
@@ -174,9 +174,9 @@ Learing react js from scratch as a beginner.
 # Episode 10:
 
 - Different ways to style UI in projects- SCSS & SaSS, Styled components, Bootstrap, Material UI, Chakra UI, Ant Design, Tailwind CSS etc..
-- Post CSS: It is a tool for transforming CSS with javascript, Tailwind CSS inernally use Post CSS
-- tailwind.config.js is configuration for tailwind CSS and .postcssrc is a configuration for Post CSS.
-- .postcssrc: Parcel(our bundler) needs .postcssrc to read Tailwind
+- `Post CSS:` It is a tool for transforming CSS with javascript, Tailwind CSS inernally use Post CSS
+- `tailwind.config.js` is configuration for tailwind CSS and .postcssrc is a configuration for Post CSS.
+- `.postcssrc:` Parcel(our bundler) needs .postcssrc to read Tailwind
 - .postcssrc is used to understand tailwind, its a kind of way that our projects understand whats inside Tailwind
 - `Higher Order Component` : It takes in a component as an input, enhances it and returns a component
 
@@ -205,3 +205,71 @@ Learing react js from scratch as a beginner.
 - Provider will take a store as props for it. `Syntax:` <Provider store = {appStore}></Provider>
 - `Creating Slice:` To create a slice we use CreateSlice which will be imported from @reduxjs/toolkit
 - CreateSlice will take a config: name, initial state, reducer-Object which has actions(addItem, removeItem etc..)
+
+* When using useSelector-make sure you are subscribing to the right portion of the store. {Impacts Performace}
+* In older versions of Redux(Vanilla redux) : We shouldn't mutate the state directly, instead we need to have a copy of state and modify it as below:
+  addItem: (state, action){
+  const newState = [...state];
+  newState.items.push(action.payload);
+  return newState;
+  }
+* In newer version we have to mutate the state directly:
+  addItem: (state, action){
+  state.items.push(action.payload);
+  }
+* Redux still does the same older way of copying a state & modifying it internally but just developers don't have to do it explicitly.
+* Redux uses "immer" library for finding the diff b/w original and mutated state and gives us back the new state ie; immutable state.
+* The process of older way of not mutating the state is abstracted with the help of immer.
+* In below action
+  emptyCart(state, action) {
+  state.items.length = 0; //will modify the original state
+  state[]; //will not modify the original state
+  return { items: [] }; //will empty [] will replace the original state
+  },
+
+# Episode 13:
+
+- `Unit Testing`
+- `Integration Testing`
+- `End to End Testing (e2e Testing)`
+- `React Test Library`- Standard library used to write test cases in react
+- `Jest:` JavaScript testing framework
+- React test library used Jest internally.
+- Installed React Testing Library and Jest
+- Installed depedencies to use babel along with Jest
+- Configured Babel dependencies
+- Now we already have Parcel in our project which internally uses Babel, since we again added babel.config.js file the babel inside parcel will conflict with the config we setup.
+- To overcome this we need to configure our Parcel config to disable default Babel transpilation in Parcel.
+- `Jest configuration:` npx jest --init; this will initialise jest and creates a new configuration file for jest.
+- In the above process we need jsdom
+- `Jsdom :` It is a JavaScript-based headless browser that can be used to create a realistic testing environment.
+- It provides a environment to run the test cases.
+- According to "https://testing-library.com/docs/react-testing-library/setup" If you're using Jest 28 or later, jest-environment-jsdom package now must be installed separately.
+- Install JSdom library: npm install --save-dev jest-environment-jsdom
+- `To run the test cases:` npm run test
+- We need to create a folder **test** so that Jest will search for files with .js/.ts and they will be considered as test files
+- It also searches for fileName.test.js or fileName.spec.js
+- testMatch: **/**tests**/**/_.[jt]s?(x), \*\*/?(_.)+(spec|test).[tj]s?(x) - 0 matches (Above point explained this)
+- `When testing a UI Component inside react you will have to render that component in to JSDOM first`
+- Installed @babel/preset-react library to make JSX work in test cases
+- Need to include @babel/preset-react inside babel config, @babel/preset-react helps testing library to convert jsx in to html code.
+- Installed @testing-library/jest-dom
+- `Syntax for test cases:`
+- test("Describe the test case here",()=>{
+  render(<ComponentName/>); //rendering to jsdom
+  const heading = screen.getByRole("heading"); //Querying it in current screen
+  expect(heading).toBeIntheDocument(); //Assertion
+  (or)
+  render(<Contact />);
+  const headings = screen.getAllByRole("heading"); //Quering
+  expect(headings.length).toBe(2); //Assertion
+  headings.forEach((heading) => {
+  expect(heading).toBeInTheDocument();
+  });
+  })
+- We can use keyword "it" as well instead of "test" while writing tests
+- `We can group the tests using "Describe"`
+  Syntax: Describe("Provide description here", () => {
+  test("", () => {})
+  test("", () => {})
+  });
