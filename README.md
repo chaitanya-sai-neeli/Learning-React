@@ -107,12 +107,12 @@ Learing react js from scratch as a beginner.
 - useState should only be used inside a functional component.
 - useState should be created at the start/top of functional component to avoid inconsistency and its a best practice.
 - Never use useState inside if-else conditional statements or loops, it doesn't make sense.
+- `Routing:` 1) Creating the router and 2) Providing the router
 - `Router Configuration`
-  1. Creating the configuration:
-  2. import createBrowserRouter from react-router-dom.
-  3. it takes in some config.
-  4. Config is a list, list of objects.
-  5. each object defines a different path and what should happen in it.
+  1. `Creating the configuration:` import createBrowserRouter from react-router-dom.
+  2. It takes in some config.
+  3. Config is a list, list of objects.
+  4. Each object defines a different path and what should happen in it.
 - Router provider is a component and it will provide us the routing config to use in our app.
 - React Router DOM gives us an access to imp. hook: useRouteError - gives us more info about the error encountered
 - When you are using react & if you wish to route to other page, we shouldn't use traditional anchor tags
