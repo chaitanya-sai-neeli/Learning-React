@@ -31,7 +31,7 @@ const Body = () => {
       setListOfRestaurants(restList);
       setAllRestList(restList);
       setLoading(false); // Set loading to false after data is fetched
-    }, 300); // 500 milli seconds loading time
+    }, 500); // 500 milli seconds loading time
   };
 
   const handleSearch = () => {
