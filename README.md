@@ -170,6 +170,11 @@ Learing react js from scratch as a beginner.
 - This improves modularity in code, maintainable and testable easily.
 - `Lazy loading:` It's used to distribute the code in to different chunks.
 - It is also known as Chunking, Code Splitting, Dynamic bundling, Ondemand loading, Dynamic import.
+- Syntax: cost Groceries = lazy(()=>import("./pathToComponent"))
+- lazy takes callback function, uses import function that has import statement holding the path of lazy loaded component
+- Suspense: Component that comes from react. Will wrap our component in Suspense
+- Syntax: <Suspense fallback={<h1>loading...</h1>}> <Grocery><Grocery/> <Suspense/>
+- fallback shows something in UI till the Grocery is loaded in to the app
 
 # Episode 10:
 
@@ -202,7 +207,7 @@ Learing react js from scratch as a beginner.
 - Installed @reduxjs/toolkit and react-redux
 - `Creating Store:` To create our own store we use ConfigureStore which will be imported from @reduxjs/toolkit
 - `Providing store:` To provide our store to the application we use Provider which will be imported from react-redux
-- Provider will take a store as props for it. `Syntax:` <Provider store = {appStore}></Provider>
+- Provider will take store as props for it. `Syntax:` <Provider store = {appStore}></Provider>
 - `Creating Slice:` To create a slice we use CreateSlice which will be imported from @reduxjs/toolkit
 - CreateSlice will take a config: name, initial state, reducer-Object which has actions(addItem, removeItem etc..)
 
