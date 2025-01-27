@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 class UserClass extends React.Component {
   constructor(props) {
     super(props);
@@ -67,3 +67,18 @@ class UserClass extends React.Component {
 }
 
 export default UserClass;
+
+// ExpensiveComponent = ({num}) => {
+//   // const expensiveCalulation = () => {
+//   //   return (num**2);
+//   // }
+//   const expensiveCalulation2 = useMemo(() => {
+//     return (num**2);
+//   }, [num])
+//   return (
+//     <div>
+//       Result is {expensiveCalulation2}
+//     </div>
+//   )
+// }
+// export default ExpensiveComponent;
