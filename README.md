@@ -278,3 +278,10 @@ Learing react js from scratch as a beginner.
   test("", () => {})
   test("", () => {})
   });
+
+# YoutubeClone
+
+- `WebSocket: ` Two way connection b/w Server and UI (Send data from either sides). Bi-Directional live data. Connection b/w 2 servers.
+  Initial connection would take time but after that its like a handshake
+- `API Poling: ` Uni derectional data connection
+- `React.StrictMode:` It's the way for React to confirm that whatever we are doing, the recoincialition is happening properly, React does its internal checks. This only happens in DEV env not in production
