@@ -283,5 +283,18 @@ Learing react js from scratch as a beginner.
 
 - `WebSocket: ` Two way connection b/w Server and UI (Send data from either sides). Bi-Directional live data. Connection b/w 2 servers.
   Initial connection would take time but after that its like a handshake
-- `API Poling: ` Uni derectional data connection
+- `API Poling: ` Uni directional data connection
 - `React.StrictMode:` It's the way for React to confirm that whatever we are doing, the recoincialition is happening properly, React does its internal checks. This only happens in DEV env not in production
+
+# Client Side Rendering
+
+- As the name suggests, the browser renders all the data in the html file on the client side.
+- The server sends a basic skeleton of html file along with all the CSS properties as well as JS functions one by one separately.
+- On the Client Side, the browser then at first receives html file and loads it up with CSS file which is received right after but the JS functions take much longer to be downloaded as it contains all the functionalities related to interactions.
+- Depending upon the size of JS functions, the loading time of Browser increases accordingly..
+- Used in websites with more interactivity such as social media. React.JS or Vue.JS
+
+# Server Side Rendering
+
+- Before sending HTML doc to the client server prerenders all the CSS properties and JS functions inside a fullfledged HTML document to display the website.
+- Used in websites with less interactivity or static websites such as news websites. Next.JS
