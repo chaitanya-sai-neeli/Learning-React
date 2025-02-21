@@ -11,7 +11,7 @@ const ShimmerMenu = () => {
 
       {/* Menu items shimmer (repeat as many as you want) */}
       {[...Array(5)].map((_, index) => (
-        <div key={index} className="animate-pulse flex items-start gap-2 mb-6">
+        <div key={index} className="animate-pulse flex items-start mb-4">
           {/* Text placeholders */}
           <div className="flex-1">
             <div className="h-4 bg-gray-200 rounded w-1/2 mb-2"></div>
