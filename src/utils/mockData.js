@@ -57,8 +57,98 @@ const restList = [
     delvTime: "15-20 mins",
     promoted: false,
     restImageUrl:
-      "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/31ea22eda5c6e935f04f45e97e54b5d6"
-  }
+      "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/31ea22eda5c6e935f04f45e97e54b5d6",
+  },
+  {
+    restName: "Chinese Wok",
+    id: 491518,
+    restCuisine: "Chinese, Tibetan, Asian",
+    restRating: "3.9 *",
+    delvTime: "35-40 mins",
+    promoted: false,
+    restImageUrl:
+      "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e0839ff574213e6f35b3899ebf1fc597",
+  },
+  {
+    restName: "Roast 24 Seven",
+    id: 618651,
+    restCuisine: "Coffee, Cafe, Desserts",
+    restRating: "3.5 *",
+    delvTime: "15-25 mins",
+    promoted: false,
+    restImageUrl:
+      "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/20d068b9982f8e71f9f570c7a36b3db9",
+  },
+  {
+    restName: "Churrolto",
+    id: 401807,
+    restCuisine: "Desserts, Italian, Mexican",
+    restRating: "4.2 *",
+    delvTime: "25-30 mins",
+    promoted: false,
+    restImageUrl:
+      "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/y6z6qksjn0nevshhssqt",
+  },
+  {
+    restName: "Millet Express",
+    id: 242994,
+    restCuisine: "Healthy food, South Indian",
+    restRating: "3.9 *",
+    delvTime: "15-25 mins",
+    promoted: false,
+    restImageUrl:
+      "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/75f8103a06f57c043f26343fa42e23e2",
+  },
+  {
+    restName: "Gappe Vappe Almond House",
+    id: 134419,
+    restCuisine: "IceCream",
+    restRating: "4.7 *",
+    delvTime: "35-40 mins",
+    promoted: false,
+    restImageUrl:
+      "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/16d2e5fd3b43981064c851a5ddba7ef7",
+  },
+  {
+    restName: "45th Avenue-Karachi Bakery",
+    id: 779181,
+    restCuisine: "IceCream",
+    restRating: "3.9 *",
+    delvTime: "35-40 mins",
+    promoted: false,
+    restImageUrl:
+      "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/2/19/b7d647af-5e90-49c4-83f2-1f7a779248c0_779181.jpg",
+  },
+  {
+    restName: "Shah-Ghouse Restaurant ",
+    id: 33040,
+    restCuisine: "Biryani, Chinese, Mughlai",
+    restRating: "4.2 *",
+    delvTime: "15-20 mins",
+    promoted: false,
+    restImageUrl:
+      "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/hnx9nazpxdpqpypjo8ld",
+  },
+  {
+    restName: "Roast ",
+    id: 65665,
+    restCuisine: "Cafe, Desserts, Cafe",
+    restRating: "4.2 *",
+    delvTime: "15-20 mins",
+    promoted: false,
+    restImageUrl:
+      "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/4c3c3f544973bcc198947681e81325e4",
+  },
+  {
+    restName: "Roast ",
+    id: 355756,
+    restCuisine: "IceCream, Desserts",
+    restRating: "4.2 *",
+    delvTime: "15-20 mins",
+    promoted: false,
+    restImageUrl:
+      "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/jtwv62bhfyagbdncengw",
+  },
 ];
 
 export default restList;
