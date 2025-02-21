@@ -3,13 +3,14 @@ import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 import RestaurantCategory from "./RestaurantCategory";
 import { useState } from "react";
+import ShimmerMenu from "./ShimmerMenu";
 
 const RestaurantMenu = () => {
   const { resID } = useParams();
   const restInfo = useRestaurantMenu(resID);
   const [showIndex, setShowIndex] = useState(0);
 
-  if (restInfo === null) return <Skeleton />;
+  if (restInfo === null) return <ShimmerMenu />;
   /*console.log("first : ", restInfo?.cards?.[2]?.card?.card?.info);
   console.log("second : ", restInfo?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[2]?.card?.card?.itemCards?.[6]?.card?.info.name);
   const itemName  = restInfo?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[2]?.card?.card?.itemCards?.[6]?.card?.info?.name || "No name available";*/

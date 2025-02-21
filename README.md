@@ -52,7 +52,7 @@ Learing react js from scratch as a beginner.
 
 - Whenever we are using a map we need to assign a key for each element of an array.
 - We shouldn't use the index of array elements as keys which is a bad practice.
-- There are 2 types of Imports and Exports
+- There are 2 types of Imports and Exports.
   1. `Default export/import` Ex: export Header from ./src/components/Header;
   2. `Named export/import` Ex: export const Header;
 
@@ -166,7 +166,7 @@ Learing react js from scratch as a beginner.
 
 # Episode 09:
 
-- We need to use Custom hooks for tasks distrubtion and make components handle individual tasks(Single Responsibility Principle).
+- We need to use Custom hooks for tasks distribution and make components handle individual tasks(Single Responsibility Principle).
 - This improves modularity in code, maintainable and testable easily.
 - `Lazy loading:` It's used to distribute the code in to different chunks.
 - It is also known as Chunking, Code Splitting, Dynamic bundling, Ondemand loading, Dynamic import.

@@ -5,6 +5,7 @@ import Skeleton from "./Skeleton";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import SkeletonRestaurant from "./SkeletonRestaurant";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -62,15 +63,15 @@ const Body = () => {
 
   // if (loading) return <Skeleton/>     //this is conditional rendering: Rendering according to a condition
   return loading ? (
-    <Skeleton />
+    <SkeletonRestaurant />
   ) : (
     <div className="bodyMain">
-      <div className="my-3.5 ml-8">
+      <div className="my-3.5 mx-auto max-w-md flex items-center ">
         <input
           type="text"
-          placeholder="search for food "
+          placeholder="Search for restaurants.. "
           // className=" ml-8 border border-black rounded-md"
-          className="px-3 py-1 rounded-md bg-blue-100 text-blue-700 focus:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-300 transition ease-in-out duration-200"
+          className="px-3 py-1 w-80 rounded-md bg-blue-100 text-blue-700 focus:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-300 transition ease-in-out duration-200"
           value={searchText}
           onChange={(e) => {
             setSearchText(e.target.value);
@@ -82,18 +83,17 @@ const Body = () => {
         >
           🔍
         </button>
-
         <button
-          className="mx-2.5 px-3.5 py-1  bg-blue-100 text-blue-700 hover:bg-blue-200 hover:shadow-md transition ease-in-out duration-200 rounded-md"
+          className="mx-2.5 px-3.5 py-1 whitespace-nowrap bg-blue-100 text-blue-700 hover:bg-blue-200 hover:shadow-md transition ease-in-out duration-200 rounded-md"
           onClick={handleFilter}
         >
           Filter by 4 rating
         </button>
-        <input
+        {/* <input
           className="px-3 py-1 rounded-md bg-blue-100 text-blue-700 focus:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-300 transition ease-in-out duration-200"
           value={loggedInUser}
           onChange={(e) => setUserName(e.target.value)}
-        ></input>
+        ></input> */}
       </div>
       <div className="flex flex-wrap my-3.5 ml-8">
         {/* Below is the basic/initial way of passing props to a component */}
@@ -105,21 +105,27 @@ const Body = () => {
         {/* {<RestoCard restData = {restList[0]}/>}
                     {<RestoCard restData = {restList[1]}/>}
                     {<RestoCard restData = {restList[2]}/>} */}
-        {listOfRestaurants.map((restaurant) => {
-          return (
-            <Link
-              key={restaurant.id}
-              to={"/restaurants/" + restaurant.id}
-              style={{ textDecoration: "none" }}
-            >
-              {restaurant.promoted ? (
-                <PromotedRestauarant restData={restaurant} />
-              ) : (
-                <RestoCard restData={restaurant} />
-              )}
-            </Link>
-          );
-        })}
+        {listOfRestaurants.length === 0 ? (
+          <h1 className="text-2xl mx-auto font-semibold text-gray-600">
+            No restaurants found!
+          </h1>
+        ) : (
+          listOfRestaurants.map((restaurant) => {
+            return (
+              <Link
+                key={restaurant.id}
+                to={"/restaurants/" + restaurant.id}
+                style={{ textDecoration: "none" }}
+              >
+                {restaurant.promoted ? (
+                  <PromotedRestauarant restData={restaurant} />
+                ) : (
+                  <RestoCard restData={restaurant} />
+                )}
+              </Link>
+            );
+          })
+        )}
       </div>
     </div>
   );
